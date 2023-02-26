@@ -1,0 +1,71 @@
+.restaurantList {
+  display: grid;
+  grid-row-gap: 16px;
+}
+
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+  header {
+    padding: 1rem 2rem;
+  }
+  header .logo img {
+    height: 7rem;
+  }
+  main {
+    max-width: 1200px;
+  }
+  .restaurantList {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  header .logo img {
+    height: 7rem;
+  }
+  header .header-menu #menu {
+    display: inline-block;
+  }
+  header .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #eee;
+    border-top: 0.1rem solid rgba(205, 170, 124, 0.2);
+    border-bottom: 0.1rem solid rgba(205, 170, 124, 0.2);
+    padding: 1rem;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  header .navbar.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  header .navbar a {
+    display: block;
+    padding: 1.5rem;
+    margin: 1rem;
+    font-size: 2rem;
+    background: var(--black);
+  }
+  .hero .hero-slider .slide {
+    justify-content: center;
+    height: 80vh;
+  }
+  .hero .hero-slider .slide .content {
+    padding: 0;
+  }
+  .hero .hero-slider .slide .content h1 {
+    font-size: 7rem;
+  }
+
+  .welcome .box-container {
+    flex-wrap: wrap;
+  }
+
+  .welcome .box-container .box {
+    width: 100%;
+  }
+}

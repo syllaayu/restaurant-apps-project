@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+:root {
+  --black: #333;
+  --light-color: #cdaa7c;
+  --box-shadow: 0 5rem 1.5rem rgba(0, 0, 0, 0.1);
+}
+* {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  text-transform: capitalize;
+  transition: all 0.2s linear;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: var(--black);
+  padding: 1rem 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: var(--box-shadow);
+  z-index: 10000;
+}
+header .logo img {
+  height: auto;
+}
+
+header .navbar a {
+  font-size: 1.7rem;
+  padding: 0.5rem 1.5rem;
+  color: var(--light-color);
+  border: 0.1rem solid transparent;
+}
+
+header .navbar a.active,
+header .navbar a:hover {
+  color: #fff;
+  border: 0.1rem solid rgba(205, 170, 124, 0.2);
+}
+
+header .header-menu i {
+  cursor: pointer;
+  margin-left: 0.5rem;
+  height: 4.5rem;
+  width: 4.5rem;
+  line-height: 4.5rem;
+  background: var(--light-color);
+  text-align: center;
+  font-size: 1.7rem;
+  color: #fff;
+}
+
+header .header-menu #menu {
+  display: none;
+}
+
+.hero .hero-slider .slide {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  justify-content: flex-start;
+}
+.hero .hero-slider .slide1 {
+  background: url(../public/images/heros/hero-image_4.jpg);
+}
+
+.hero .hero-slider .slide2 {
+  background: url(../public/images/heros/hero-image_3.jpg);
+}
+
+.hero .hero-slider .slide1,
+.hero .hero-slider .slide2 {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.hero .hero-slider .slide .content {
+  text-align: center;
+  padding-left: 9rem;
+  margin: 0 auto;
+}
+
+.hero .hero-slider .slide .content h3 {
+  color: var(--light-color);
+  font-size: 3rem;
+  font-weight: 300;
+}
+
+.hero .hero-slider .slide .content h1 {
+  color: #fff;
+  font-size: 8rem;
+}
+.hero .hero-slider .slide .content p {
+  color: #e6e7e7;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+  padding: 0.5rem 0;
+  line-height: 1.5;
+  font-weight: 200;
+}
+
+.swiper-pagination-bullet {
+  background: var(--light-color) !important;
+  width: 15px !important;
+  height: 15px !important;
+  border-radius: 0 !important;
+}
+main {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  padding: 32px;
+}
+
+.explore {
+  width: 100%;
+  margin: 60px auto;
+  text-align: center;
+}
+
+.explore-label::after {
+  content: '';
+  margin-top: 16px;
+  display: block;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.restaurants {
+  margin: 32px auto auto;
+  text-align: left;
+}
+
+.restaurant-item {
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.item-thumbnail {
+  height: 265px;
+  object-fit: cover;
+  background-size: cover;
+}
+
+.thumbnail {
+  position: relative;
+}
+
+.item-content {
+  width: 100%;
+  padding: 16px;
+}
+
+.content-rating {
+  padding-bottom: 10px;
+}
+
+.content-title a {
+  padding-top: 32px;
+  color: black;
+  text-decoration: none;
+}
+
+.content-description {
+  margin-top: 16px;
+  font-size: 12px;
+  line-height: 1.5em;
+}
+
+.item-city {
+  position: absolute;
+  top: 20px;
+  text-align: center;
+  padding: 5px;
+  font-weight: bold;
+  background-color: #dddd;
+  border-radius: 0 5px 5px 0;
+}
+
+.restaurant-detail-container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 800px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px 16px;
+}
+
+.restaurant-detail-thumbnail {
+  border-radius: 5px;
+  box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.2);
+  margin-top: 50px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.restaurant-detail-thumbnail .restaurant-detail-name {
+  margin-top: 20px;
+}
+
+.restaurant-detail-poster {
+  max-width: 100%;
+  margin-top: 20px;
+  object-fit: cover;
+  background-size: cover;
+}
+
+.restaurant-detail-container .restaurant-detail-info {
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.2);
+  text-align: center;
+  margin: 8px 0;
+}
+
+.restaurant-detail-container .restaurant-detail-info .info-flex {
+  margin: 10px 0;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.restaurant-info {
+  margin: 10px;
+  border-radius: 4px;
+  padding: 5px;
+  background-color: #dddd;
+}
+
+.restaurant-detail-container .restaurant-detail-menus {
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.2);
+  text-align: center;
+  margin: 8px 0;
+}
+
+.restaurant-detail-container .restaurant-detail-menus .restaurant-detail-menu {
+  font-weight: bold;
+}
+
+.info-menu-title h4 {
+  margin: 10px auto;
+  width: 70px;
+  border-radius: 4px;
+  padding: 5px;
+  background-color: #dddd;
+}
+
+.restaurant-detail-reviews {
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.2);
+  text-align: center;
+  margin: 8px 0;
+}
+
+.restaurant-detail-reviews .restaurant-detail-review {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.review-customer-wrap {
+  margin: 10px auto;
+  width: 100%;
+  border-radius: 4px;
+  padding: 5px;
+  background-color: #dddd;
+}
+
+.restaurant-detail-reviews .restaurant-detail-review .reviewer {
+  font-weight: bold;
+}
+
+footer {
+  width: 100%;
+  background-color: #dddddd;
+  padding: 12px;
+  text-align: center;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  padding: 8px;
+  background-color: #ddd;
+  z-index: 100;
+  color: black;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 0;
+}
